@@ -1,0 +1,553 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>De1</title>
+	
+	<link rel="stylesheet" href="css/style.css">
+	
+	
+	
+	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css" >
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="js/jssor.slider-22.2.8.mini.js" type="text/javascript"></script>
+	<script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:1200,$Opacity:2}
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*responsive code begin*/
+            /*you can remove responsive code if you don't want the slider scales while window resizing*/
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 1280); /*Độ rộng của slideshow*/
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            /*responsive code end*/
+        });
+    </script>
+    <style>
+   <style>
+        /* jssor slider bullet navigator skin 05 css */
+        /*
+        .jssorb05 div           (normal)
+        .jssorb05 div:hover     (normal mouseover)
+        .jssorb05 .av           (active)
+        .jssorb05 .av:hover     (active mouseover)
+        .jssorb05 .dn           (mousedown)
+        */
+        .jssorb05 {
+            position: absolute;
+        }
+        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 16px;
+            height: 16px;
+            background: no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .jssorb05 div { background-position: -7px -7px; }
+        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+        .jssorb05 .av { background-position: -67px -7px; }
+        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+        /* jssor slider arrow navigator skin 12 css */
+        /*
+        .jssora12l                  (normal)
+        .jssora12r                  (normal)
+        .jssora12l:hover            (normal mouseover)
+        .jssora12r:hover            (normal mouseover)
+        .jssora12l.jssora12ldn      (mousedown)
+        .jssora12r.jssora12rdn      (mousedown)
+        */
+        .jssora12l, .jssora12r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 30px;
+            height: 46px;
+            cursor: pointer;
+            background:no-repeat;
+            overflow: hidden;
+        }
+        .jssora12l { background-position: -16px -37px; }
+        .jssora12r { background-position: -75px -37px; }
+        .jssora12l:hover { background-position: -136px -37px; }
+        .jssora12r:hover { background-position: -195px -37px; }
+        .jssora12l.jssora12ldn { background-position: -256px -37px; }
+        .jssora12r.jssora12rdn { background-position: -315px -37px; }
+    </style>
+	
+	
+</head>
+
+<body>
+	
+	<div class="container">
+				<button  onclick="topFunction()" id="myBtn" title="Go to top">
+							
+							<i class="tiny material-icons" style="font-size: 30px; color: #5E5B5B;text-align: center; color: #FDCE76" >check_box_outline_blank</i>
+					
+				</button>
+				<div class="slider">
+					
+					<div class="header">
+							
+						<img src="images/CWS-logo-white-150x45.png" >
+						
+						<ul>
+						
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Percing</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Contacts</a></li>
+							<li><a href="#">Make an Appointment</a></li>
+							
+							<div class="roundborder">
+										
+							
+							</div>
+							
+							
+						
+						
+						
+						
+						
+						</ul>
+					
+					
+						</div>
+					<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1280px;height:800px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
+            <div style="filter: alpha(opacity=100); opacity: 0.2; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1280px;height:800px;overflow:hidden;">
+            
+            <div>
+                <img data-u="image" src="images/slider.jpg" />
+            </div>
+           
+            
+            
+            
+            
+            
+        
+    </div>
+						
+
+					</div>
+					
+					
+					<div class="titleslider">
+					<p>Home Insurence</p>
+					
+					</div>
+					
+					<div class="titleslider2">
+					
+					<h1>YOU'RE IN GOOD HANDS </h1> <br>
+					
+					</div>
+					
+					<div class="titleslider3">
+					<h1>WITH COMERSILO</h1>
+					</div>
+					
+					<div class="contentslider">
+					<p>
+						We are the most reliable company in the insurence market 
+						
+						</p>
+					
+					</div>
+					
+					<div class="contentslider2">
+					<p>
+						with thousand of satisfieds clients all over the world 
+						
+						</p>
+					
+					</div>
+					
+					
+					<div class="learnmore">
+							<input type="submit"  value="Learn More" class="buttonsubmit" style="width: 130px; height: 50px; border-radius: 20px; cursor: pointer; border: thin; ">			
+					</div>
+					
+					<div class="contactus">
+							<input type="submit"  value="Contact us" class="buttonsubmit" style="width: 130px; height: 50px; border-radius: 20px; cursor: pointer; border: thin; ">			
+					</div>
+					
+					</div>
+				
+		
+				<div class="middle" style="background-color: rgba(1,146,186,1.00);">
+					<div class="content">
+					
+						<div class="khung1">
+						<center>
+							<img src="images/De-01_03.gif">
+									<h3>HOME INSURENCE</h3>
+									<p>Do you want your home to be truly safe? Ensure if with our insurence services </p>
+									<a href="#">Read More</a>
+							
+							</center>
+							
+						
+						
+						
+						</div>
+						<div class="khung2">
+							<center>
+							<img src="images/De-01_05.gif">
+									<h3>VEHICLE INSURENCE</h3>
+									<p>Do you want your home to be truly safe? Ensure if with our insurence services </p>
+									<a href="#">Read More</a>
+							
+							</center>
+						
+						
+						
+						</div>
+						<div class="khung3">
+								<center>
+							<img src="images/De-01_07.gif">
+									<h3>TRAVEL INSURENCE</h3>
+									<p>Do you want your home to be truly safe? Ensure if with our insurence services </p>
+									<a href="#">Read More</a>
+							
+							</center>
+						
+						
+						</div>
+						<div class="khung4">
+							<center>
+							<img src="images/De-01_09.png">
+									<h3>HEALTH INSURENCE</h3>
+									<p>Do you want your home to be truly safe? Ensure if with our insurence services </p>
+									<a href="#">Read More</a>
+							
+							</center>
+						
+						
+						</div>
+						
+						
+						
+					
+					</div>
+					
+		
+		
+		
+				</div>	
+				<div class="middle2">
+		
+					<div class="content2">
+					
+							<div class="hinhanh">
+						
+								<img src="images/hinh.gif" >
+						
+						</div>
+							<div class="noidunghinhanh">
+						
+									<h4>Why Cormesilo ? </h4>
+									<p>We protect people of different lifestyle to save their weath. Health and good mood</p>
+									 <i class="tiny material-icons">check_box_outline_blank </i> <br>
+								<p class="noidung1">Free insurence consutting before your contact signture</p>
+								<i class="tiny material-icons">check_box_outline_blank</i><br>
+								<p class="noidung2">Insurence services of any goat and case for every person</p>
+								<i class="tiny material-icons">check_box_outline_blank</i><br>
+								<p class="noidung3">We provived our beloved clients with 100% payback</p>
+									
+								<div class="buttonmiddle">
+									<input type="submit" value="Find Agents" class="buttonsubmit" style="width: 130px; height: 50px; border-radius: 20px; cursor: pointer; border: thin; "  >
+									</div>
+						
+							</div>
+					
+					
+					
+					</div>
+		
+						<hr class="duongthang">
+		
+				</div>
+				<div class="middle3">
+					<div class="content3">
+					
+							<div class="ask1" style="position: relative" >
+									
+								<i class="tiny material-icons" style="font-size: 45px; color: #5E5B5B; line-height: 326px; float: left; " >check_box_outline_blank</i>
+									
+								<h6 style="margin-left: 70px; line-height: 240px; font-size: 15px; color: rgba(71,71,71,1.00);font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif'"  >Best Support</h6>
+								
+								<p style="margin-left: 70px; position: absolute; top:170px;     font-size: 15px; color: rgba(71,71,71,1.00);font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif'">We are unvailable 24/7 you can chat with us or make a phone call to discuss your issue</p>
+							</div>
+						
+							<div class="ask2" style="position: relative">
+									<i class="tiny material-icons" style="font-size: 45px; color: #5E5B5B; line-height: 326px; float: left; " >check_box_outline_blank</i>
+									
+								<h6 style="margin-left: 70px; line-height: 240px; font-size: 15px; color: rgba(71,71,71,1.00);font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif'"  >Professional Agents</h6>
+								
+								<p style="margin-left: 70px; position: absolute; top:170px;     font-size: 15px; color: rgba(71,71,71,1.00);font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif'">Our staff combined professional compilic center. We are the company number one is region</p>
+						
+						
+							</div>
+							<div class="ask3" style="position: relative">
+									<i class="tiny material-icons" style="font-size: 45px; color: #5E5B5B; line-height: 326px; float: left; " >check_box_outline_blank</i>
+									
+								<h6 style="margin-left: 70px; line-height: 240px; font-size: 15px; color: rgba(71,71,71,1.00);font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif'"  >The Best in North America</h6>
+								
+								<p style="margin-left: 70px; position: absolute; top:170px;     font-size: 15px; color: rgba(71,71,71,1.00);font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif'">According to the professional analtyc center. We are the number one company is the region</p>
+						
+						
+						
+							</div>
+					
+					
+					
+					</div>
+		
+		
+		
+				</div>
+				<div class="middle4" style="position: relative" >
+		
+						<img src="images/Untitled-1.png" style="opacity: 0.2" >
+						<div class="count" style="position: absolute;top: 95px;left: 150px;font-size: 80px; font-family:Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif'; ">1450</div>
+						<h3 style="position: absolute;top: 165px;left: 200px;font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';color: rgba(255,255,255,1.00)">HAPPY CLIENTS</h3>
+					
+						<div class="count" style="position: absolute;top: 95px;left: 425px;font-size: 80px; font-family:Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif'; ">12</div>
+						<h3 style="position: absolute;top: 165px;left: 405px;font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';color: rgba(255,255,255,1.00)">INSURENCE PRODUCTS</h3>
+					
+						<div class="count" style="position: absolute;top: 95px;left: 665px;font-size: 80px; font-family:Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif'; ">14</div>
+						<h3 style="position: absolute;top: 165px;left: 650px;font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';color: rgba(255,255,255,1.00)">YEAR OF EXPERIENCE</h3>
+					
+						<div class="count" style="position: absolute;top: 95px;left: 900px;font-size: 80px; font-family:Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif'; ">120</div>
+					
+						<h3 style="position: absolute;top: 165px;left: 895px;font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';color: rgba(255,255,255,1.00)">PROFESSIONAL AGENTS</h3>
+						
+			</div>
+				<div class="middle5"  >
+								<div class="box5" style="width: 900px;height: 400px;  position: relative">
+									<img src="images/hinh4_03.gif" style="float: left; margin-right: 30px; margin-top: 30px" >
+									
+									<h6 style="color: rgba(255,255,255,1.00); font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif'; font-size: 30px; padding-top:22px;color: rgba(49,49,49,1.00)" >How It Works</h6>
+									
+									<p style="color: rgba(255,255,255,1.00); font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif'; font-size: 16px;position: absolute;right: 30px;width: 350px;top: 60px;color: rgba(63,63,63,1.00)" >Get accquired with the process of insurence it takes just a few simple test</p>
+									
+									<i class="tiny material-icons" style="font-size: 16px; color: #5E5B5B; line-height: 3px; position: absolute;" >check_box_outline_blank</i> 
+									
+									<h3 style="position: absolute;top: 120px; left: 550px;font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';font-size: 14px;">Choose Your Insurence</h3>
+									
+									<p style="position: absolute;top: 143px; left: 550px;font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';font-size: 10px;color: rgba(128,122,122,1.00)">The first step is setting up your gold - pick your service</p>
+									
+									
+									
+									<i class="tiny material-icons" style="font-size: 16px; color: #5E5B5B; line-height: 3px;position: absolute; top: 180px;" >check_box_outline_blank</i>
+									
+									
+									<h3 style="position: absolute;top: 170px; left: 550px;font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';font-size: 14px;">Select Your Agents</h3>
+									<p style="position: absolute;top: 192px; left: 550px;font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';font-size: 10px;color: rgba(128,122,122,1.00);width: 249px;">Meet your friendly team of professional who will be glad to assit you</p>
+									
+									<i class="tiny material-icons" style="font-size: 16px; color: #5E5B5B; line-height: 3px;position: absolute; top:240px;" >check_box_outline_blank</i>
+									
+									<h3 style="position: absolute;top: 228px; left: 550px;font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';font-size: 14px;">Contact Agents</h3>
+									<p style="position: absolute;top: 252px; left: 550px;font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';font-size: 10px;color: rgba(128,122,122,1.00);width: 249px;">You agents will call you once you put a signture and start working with us</p>
+								</div>
+		
+		
+		
+		
+				</div>
+				<div class="middle6" style="position: relative">
+						<center>
+									<h5 style="font-size: 25px;font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';padding-top: 40px;">What people say about us </h5>
+							
+									<p style="font-size: 12px;font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';position: absolute;right: 520px;bottom: 55px;">Here are comments from our beloved clients</p>
+							
+									<i class="tiny material-icons" style="font-size: 10px; color: #181818; line-height: 3px; position: absolute;left: 610px;bottom: 45px" >lens</i>
+									<i class="tiny material-icons" style="font-size: 10px; color: #181818; line-height: 3px; position: absolute;left: 630px;bottom: 45px" >lens</i>
+									<i class="tiny material-icons" style="font-size: 10px; color: #181818; line-height: 3px; position: absolute;left: 650px;bottom: 45px" >lens</i>
+					
+					
+						</center>
+		
+		
+				</div>
+				<div class="middle7">
+					<div class="box7" >
+					
+						<img src="images/content_03.gif" style="margin-top:70px" >
+						<img src="images/content_05.gif" style="margin-left: 35px" >
+						<img src="images/content_07.gif" style="margin-left: 35px">
+						<img src="images/content_09.gif" style="margin-left: 35px">
+						<img src="images/content_11.gif" style="margin-left: 35px">
+						<img src="images/content_13.gif" style="margin-left: 35px;" >
+					
+					</div>
+		
+				</div>
+				<div class="middle8">
+									<div class="box8" style="position: relative">
+											<h4 style="position: absolute;left: 140px;bottom: 50px;font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';color: aliceblue">+(800)-2345-6789</h4>
+										
+											<p style="position: absolute;left: 170px;bottom: 38px;font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';font-size: 12px;color: aliceblue">Phone Number</p>
+											
+											<h4 style="position: absolute;left: 430px;bottom: 50px;font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';color: aliceblue">28 Jackson Blvd Sate</h4>
+										
+											<p style="position: absolute;left: 428px;bottom: 38px;font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';font-size: 12px;color: aliceblue">1020 Chicago IL 6066064-2340</p>
+										
+											<h4 style="position: absolute;left: 720px;bottom: 50px;font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';color: aliceblue">info@delink.org</h4>
+										
+											<p style="position: absolute;left: 750px;bottom: 38px;font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';font-size: 12px;color: aliceblue">Email Adress</p>
+					
+									</div>
+		
+		
+					</div>
+				<div class="footer">
+					<div class="boxfooter" style="position: relative">
+					
+								<center>
+						
+									<img src="images/CWS-logo-white-150x45.png" style="margin-top: 50px;" >
+									<a class="menucon" style="position: absolute; top: 110px; left: 200px;text-decoration: none;color: aliceblue" href="#">Home</a>
+									<a class="menucon" style="position: absolute; top: 110px; left: 280px;text-decoration: none;color: aliceblue" href="#">About us</a>
+									<a class="menucon" style="position: absolute; top: 110px; left: 365px;text-decoration: none;color: aliceblue" href="#">Services</a>
+									<a class="menucon" style="position: absolute; top: 110px; left: 450px;text-decoration: none;color: aliceblue" href="#">Pircing</a>
+									<a class="menucon" style="position: absolute; top: 110px; left: 530px;text-decoration: none;color: aliceblue" href="#">Blog</a>
+									<a class="menucon" style="position: absolute; top: 110px; left: 595px;text-decoration: none;color: aliceblue" href="#">Contacts</a>
+									
+									<i class="tiny material-icons" style="font-size: 8px; color: #292929; line-height: 3px;position: absolute; top:143px;left:321px;z-index: 1000;" >check_box_outline_blank</i>
+									
+									<i class="tiny material-icons" style="font-size: 8px; color: #292929; line-height: 3px;position: absolute; top:143px;left:381px;z-index: 1000;" >check_box_outline_blank</i>
+									
+									<i class="tiny material-icons" style="font-size: 8px; color: #292929; line-height: 3px;position: absolute; top:143px;left:441px;z-index: 1000;" >check_box_outline_blank</i>
+									
+									<i class="tiny material-icons" style="font-size: 8px; color: #292929; line-height: 3px;position: absolute; top:143px;left:501px;z-index: 1000;" >check_box_outline_blank</i>
+									
+									<i class="tiny material-icons" style="font-size: 8px; color: #292929; line-height: 3px;position: absolute; top:143px;left:561px;z-index: 1000;" >check_box_outline_blank</i>
+									
+									<div class="vongtron">
+									
+									</div>
+									
+									<div class="vongtron2">
+									
+									</div>
+									
+									<div class="vongtron3">
+									
+									</div>
+									
+									<div class="vongtron4">
+									
+									</div>
+									
+									<div class="vongtron5">
+									
+									</div>
+									
+									<p style="position: absolute; top: 190px; left: 285px;text-decoration: none;color: #4F4D4D" >@Copyright Comersilo 2019. All Right Serverd</p>
+						
+								</center>
+					
+					</div>
+		
+				</div>
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+	
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script  src="js/script.js"></script>
+	
+	<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+	
+</body>
+</html>
